@@ -1,5 +1,4 @@
 @import 'tailwindcss';
-
 @layer base {
   :root {
     /* Dark theme base colors */
@@ -119,17 +118,15 @@
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-
   body {
-    @apply bg-background text-foreground;
+    color: hsl(var(--foreground));
     background: var(--gradient-bg);
     font-family: 'Inter', system-ui, sans-serif;
   }
 }
-
+.hover\:border-primary\/50:hover {
+  border-color: hsl(var(--primary) / 0.5);
+}
 @layer utilities {
   /* Terminal and Code Styling */
   .font-mono {
@@ -174,6 +171,10 @@
     animation: glow-pulse 2s ease-in-out infinite alternate;
   }
 
+  .hover\:animate-glow-pulse:hover {
+    animation: glow-pulse 2s ease-in-out infinite alternate;
+  }
+
   .animate-slide-up {
     animation: slide-up 0.8s ease-out;
   }
@@ -189,6 +190,201 @@
 
   .bg-gradient-secondary {
     background: var(--gradient-secondary);
+  }
+
+  /* Background Colors */
+  .bg-background {
+    background-color: hsl(var(--background));
+  }
+  .bg-foreground {
+    background-color: hsl(var(--foreground));
+  }
+  .bg-card {
+    background-color: hsl(var(--card));
+  }
+  .bg-card-foreground {
+    background-color: hsl(var(--card-foreground));
+  }
+  .bg-popover {
+    background-color: hsl(var(--popover));
+  }
+  .bg-popover-foreground {
+    background-color: hsl(var(--popover-foreground));
+  }
+  .bg-primary {
+    background-color: hsl(var(--primary));
+  }
+  .bg-primary-foreground {
+    background-color: hsl(var(--primary-foreground));
+  }
+  .bg-primary-glow {
+    background-color: hsl(var(--primary-glow));
+  }
+  .bg-secondary {
+    background-color: hsl(var(--secondary));
+  }
+  .bg-secondary-foreground {
+    background-color: hsl(var(--secondary-foreground));
+  }
+  .bg-destructive {
+    background-color: hsl(var(--destructive));
+  }
+  .bg-destructive-foreground {
+    background-color: hsl(var(--destructive-foreground));
+  }
+  .bg-muted {
+    background-color: hsl(var(--muted));
+  }
+  .bg-muted-foreground {
+    background-color: hsl(var(--muted-foreground));
+  }
+  .bg-accent {
+    background-color: hsl(var(--accent));
+  }
+  .bg-accent-foreground {
+    background-color: hsl(var(--accent-foreground));
+  }
+  .bg-code-green {
+    background-color: hsl(var(--code-green));
+  }
+  .bg-code-blue {
+    background-color: hsl(var(--code-blue));
+  }
+  .bg-code-purple {
+    background-color: hsl(var(--code-purple));
+  }
+  .bg-code-orange {
+    background-color: hsl(var(--code-orange));
+  }
+  .bg-sidebar {
+    background-color: hsl(var(--sidebar-background));
+  }
+  .bg-sidebar-foreground {
+    background-color: hsl(var(--sidebar-foreground));
+  }
+  .bg-sidebar-primary {
+    background-color: hsl(var(--sidebar-primary));
+  }
+  .bg-sidebar-primary-foreground {
+    background-color: hsl(var(--sidebar-primary-foreground));
+  }
+  .bg-sidebar-accent {
+    background-color: hsl(var(--sidebar-accent));
+  }
+  .bg-sidebar-accent-foreground {
+    background-color: hsl(var(--sidebar-accent-foreground));
+  }
+
+  /* Text Colors */
+  .text-background {
+    color: hsl(var(--background));
+  }
+  .text-foreground {
+    color: hsl(var(--foreground));
+  }
+  .text-card {
+    color: hsl(var(--card));
+  }
+  .text-card-foreground {
+    color: hsl(var(--card-foreground));
+  }
+  .text-popover {
+    color: hsl(var(--popover));
+  }
+  .text-popover-foreground {
+    color: hsl(var(--popover-foreground));
+  }
+  .text-primary {
+    color: hsl(var(--primary));
+  }
+  .text-primary-foreground {
+    color: hsl(var(--primary-foreground));
+  }
+  .text-primary-glow {
+    color: hsl(var(--primary-glow));
+  }
+  .text-secondary {
+    color: hsl(var(--secondary));
+  }
+  .text-secondary-foreground {
+    color: hsl(var(--secondary-foreground));
+  }
+  .text-destructive {
+    color: hsl(var(--destructive));
+  }
+  .text-destructive-foreground {
+    color: hsl(var(--destructive-foreground));
+  }
+  .text-muted {
+    color: hsl(var(--muted));
+  }
+  .text-muted-foreground {
+    color: hsl(var(--muted-foreground));
+  }
+  .text-accent {
+    color: hsl(var(--accent));
+  }
+  .text-accent-foreground {
+    color: hsl(var(--accent-foreground));
+  }
+  .text-code-green {
+    color: hsl(var(--code-green));
+  }
+  .text-code-blue {
+    color: hsl(var(--code-blue));
+  }
+  .text-code-purple {
+    color: hsl(var(--code-purple));
+  }
+  .text-code-orange {
+    color: hsl(var(--code-orange));
+  }
+  .text-sidebar {
+    color: hsl(var(--sidebar-background));
+  }
+  .text-sidebar-foreground {
+    color: hsl(var(--sidebar-foreground));
+  }
+  .text-sidebar-primary {
+    color: hsl(var(--sidebar-primary));
+  }
+  .text-sidebar-primary-foreground {
+    color: hsl(var(--sidebar-primary-foreground));
+  }
+  .text-sidebar-accent {
+    color: hsl(var(--sidebar-accent));
+  }
+  .text-sidebar-accent-foreground {
+    color: hsl(var(--sidebar-accent-foreground));
+  }
+
+  /* Border Colors */
+  .border-border {
+    border-color: hsl(var(--border));
+  }
+  .border-input {
+    border-color: hsl(var(--input));
+  }
+  .border-ring {
+    border-color: hsl(var(--ring));
+  }
+  .border-primary {
+    border-color: hsl(var(--primary));
+  }
+  .border-secondary {
+    border-color: hsl(var(--secondary));
+  }
+  .border-destructive {
+    border-color: hsl(var(--destructive));
+  }
+  .border-muted {
+    border-color: hsl(var(--muted));
+  }
+  .border-accent {
+    border-color: hsl(var(--accent));
+  }
+  .border-sidebar-border {
+    border-color: hsl(var(--sidebar-border));
   }
 }
 
