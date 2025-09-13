@@ -238,6 +238,9 @@
   .bg-muted-foreground {
     background-color: hsl(var(--muted-foreground));
   }
+  .bg-border {
+    background-color: hsl(var(--border));
+  }
   .bg-accent {
     background-color: hsl(var(--accent));
   }
@@ -330,13 +333,22 @@
   .text-code-green {
     color: hsl(var(--code-green));
   }
+  .hover\:text-code-green:hover {
+    color: hsl(var(--code-green));
+  }
   .text-code-blue {
+    color: hsl(var(--code-blue));
+  }
+  .hover\:text-code-blue:hover {
     color: hsl(var(--code-blue));
   }
   .text-code-purple {
     color: hsl(var(--code-purple));
   }
   .text-code-orange {
+    color: hsl(var(--code-orange));
+  }
+  .hover\:text-code-orange:hover {
     color: hsl(var(--code-orange));
   }
   .text-sidebar {
