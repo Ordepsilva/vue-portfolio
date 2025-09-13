@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import Navigation from '@/components/navigation/Navigation.vue'
+import Navigation from '@/components/navigation/Navigation.vue';
+import { Toaster } from '@/components/ui/sonner';
+import 'vue-sonner/style.css';
 </script>
 
 <template>
@@ -8,6 +10,7 @@ import Navigation from '@/components/navigation/Navigation.vue'
       <Navigation />
       <main>
         <RouterView />
+        <Toaster />
       </main>
 
       <div className="container mx-auto px-6 py-8">
