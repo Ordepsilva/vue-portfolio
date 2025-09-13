@@ -7,29 +7,55 @@ const projects = [
   {
     title: 'Bloqit Pokedex',
     description:
-      'Full-featured Pokedex application built with React and TypeScript. Features real-time data fetching, responsive design, and a beautiful UI.',
-    tech: ['React', 'TypeScript', 'Tailwind CSS', 'Chart.js'],
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
+      'Full-featured Pokedex application built with Vue3 and TypeScript. Features real-time data fetching, responsive design, offline mode and a beautiful UI.',
+    tech: ['Vue3', 'Vite', 'TypeScript', 'Tailwind CSS', 'Pinia', 'PWA'],
+    image: '/public/bloqitpokedex.png',
     github: 'https://github.com/Ordepsilva/bloq.it.fe.challenge',
     demo: 'https://bloqitpokedex.netlify.app/',
   },
   {
     title: 'Ambiuus Website',
     description:
-      'Collaborative task management application with drag-and-drop functionality, built using Svelte and modern web technologies.',
-    tech: ['Svelte', 'JavaScript', 'CSS3', 'LocalStorage'],
-    image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop',
+      'Modern website for Ambiuus, a barber shop. Features online booking, service showcase, responsive design, and a stylish, professional look.',
+    tech: ['React', 'Typescript', 'Next.js', 'Tailwind CSS'],
+    image: '/public/ambiuus-web.png',
     github: 'https://github.com/Ordepsilva/AmbiuusWebsite',
     demo: 'https://ambiuus.netlify.app/',
   },
   {
-    title: 'Boon Ai ',
+    title: 'Boon Ai',
     description:
-      'Beautiful weather application with location-based forecasts, animated weather icons, and responsive design.',
-    tech: ['React', 'API Integration', 'CSS Animations', 'PWA'],
-    image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop',
-    github: '#',
+      'Boon.ai is an AI-powered go-to-market platform that equips sales and marketing teams with intelligent agents to automate prospecting, market research, and customer engagement. It leverages real-time buyer signals and intent data to help teams identify opportunities faster, personalize outreach, and scale growth more efficiently.',
+    tech: [
+      'React',
+      'TypeScript',
+      'CSS Animations',
+      '.Net Core',
+      'MongoDB',
+      'Extensions for Chrome',
+      'CI/CD',
+    ],
+    image: '/public/boon.png',
+    github: '',
     demo: 'https://www.boon.ai/',
+  },
+  {
+    title: 'My Portfolio',
+    description:
+      'My personal portfolio website showcasing my projects, experience, and skills, built with Vue 3 and Tailwind CSS.',
+    tech: ['Vue 3', 'TypeScript', 'Tailwind CSS', 'Vite'],
+    image: '/public/portfolio.png',
+    github: 'https://github.com/Ordepsilva/vue-portfolio',
+    demo: '',
+  },
+  {
+    title: 'Simdle Workshop',
+    description:
+      'Simdle Workshop is a garage management platform with features like warehouse and stock management, process digitalization, and customer prioritization. I built this with a team, and it was my first released project with actual customers.',
+    tech: ['Svelte', 'Golang', 'MongoDB', 'TypeScript', 'CSS'],
+    image: '/public/simdle-workshop.png',
+    github: '',
+    demo: 'https://automotive.simdle.lu/en/workshop',
   },
 ];
 </script>
@@ -61,13 +87,13 @@ const projects = [
                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
               >
                 <div class="flex gap-4">
-                  <a :href="project.github" target="_blank">
+                  <a v-if="project.github" :href="project.github" target="_blank">
                     <Button size="sm" variant="outline" class="border-primary text-primary">
                       <Github class="w-4 h-4 mr-2" />
                       Code
                     </Button>
                   </a>
-                  <a :href="project.demo" target="_blank">
+                  <a v-if="project.demo" :href="project.demo" target="_blank">
                     <Button size="sm" class="bg-gradient-primary" target="_blank">
                       <ExternalLink class="w-4 h-4 mr-2" />
                       Live Demo
@@ -97,13 +123,15 @@ const projects = [
         </div>
 
         <div class="text-center mt-12">
-          <Button
-            variant="outline"
-            class="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-          >
-            <Github class="w-4 h-4 mr-2" />
-            View All Projects on GitHub
-          </Button>
+          <a href="https://github.com/ordepsilva" target="_blank">
+            <Button
+              variant="outline"
+              class="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+            >
+              <Github class="w-4 h-4 mr-2" />
+              View All Projects on GitHub
+            </Button>
+          </a>
         </div>
       </div>
     </div>

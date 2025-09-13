@@ -1,49 +1,49 @@
 <script lang="ts" setup>
-import { computed, onMounted, ref, watch } from 'vue'
+import { computed, onMounted, ref, watch } from 'vue';
 
-const displayText = ref('')
-const currentLine = ref(0)
+const displayText = ref('');
+const currentLine = ref(0);
 
 const terminalLines = [
   '> whoami',
   'Pedro Silva, Frontend Developer',
   '> experience --years',
-  '4.5 years of crafting digital experiences',
+  'Close to 5 years of crafting digital experiences',
   '> skills --list',
-  'React • Svelte • TypeScript • Modern Web',
-]
+  'React • Svelte • Vue • TypeScript • Modern Web',
+];
 
-const displayLines = computed(() => displayText.value.split('\n'))
+const displayLines = computed(() => displayText.value.split('\n'));
 
 function typeLine(line: string, callback: () => void) {
-  let charIndex = 0
+  let charIndex = 0;
   const interval = setInterval(() => {
     if (charIndex < line.length) {
-      displayText.value += line[charIndex]
-      charIndex++
+      displayText.value += line[charIndex];
+      charIndex++;
     } else {
-      clearInterval(interval)
+      clearInterval(interval);
       setTimeout(() => {
-        displayText.value += '\n'
-        callback()
-      }, 500)
+        displayText.value += '\n';
+        callback();
+      }, 500);
     }
-  }, 50)
+  }, 50);
 }
 
 watch(currentLine, (newVal) => {
   if (newVal < terminalLines.length) {
     typeLine(terminalLines[newVal], () => {
-      currentLine.value++
-    })
+      currentLine.value++;
+    });
   }
-})
+});
 
 onMounted(() => {
   typeLine(terminalLines[0], () => {
-    currentLine.value++
-  })
-})
+    currentLine.value++;
+  });
+});
 </script>
 <template>
   <div class="terminal-glow rounded-lg p-6 mb-8 text-left max-w-2xl mx-auto">

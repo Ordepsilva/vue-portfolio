@@ -6,7 +6,7 @@ const skills = [
   {
     icon: Code,
     title: 'Frontend Development',
-    description: 'Expert in React, Svelte, TypeScript, and modern JavaScript frameworks',
+    description: 'Knowledge in React, Svelte, Vue, and TypeScript',
     color: 'text-code-green',
   },
   {
@@ -32,7 +32,8 @@ const skills = [
           <span class="text-glow">About Me</span>
         </h2>
         <p class="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Passionate frontend developer with 4.5 years of experience crafting digital experiences
+          Passionate frontend developer with close to 5 years of experience crafting digital
+          experiences
         </p>
 
         <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
@@ -44,13 +45,14 @@ const skills = [
                   <span class="text-code-blue">name:</span>
                   <span class="text-code-orange">"Pedro Silva"</span>,
                 </div>
+
                 <div>
                   <span class="text-code-blue">role:</span>
                   <span class="text-code-orange">"Frontend Developer"</span>,
                 </div>
                 <div>
                   <span class="text-code-blue">experience:</span>
-                  <span class="text-code-green">"4.5 years"</span>,
+                  <span class="text-code-green">"Close to 5 years"</span>,
                 </div>
                 <div>
                   <span class="text-code-blue">passion:</span>
@@ -73,20 +75,37 @@ const skills = [
 
           <div class="space-y-4">
             <p class="text-lg leading-relaxed text-muted-foreground">
-              I'm a frontend developer with a passion for creating beautiful, performant web
-              applications. With 4.5 years of experience, I've specialized in React and Svelte
-              ecosystems, building everything from complex dashboards to interactive user
-              interfaces.
+              I spend my days building web apps that (hopefully) don’t break. By night, I trade side
+              projects for family time — because life’s best UI is the people around me.
             </p>
             <p class="text-lg leading-relaxed text-muted-foreground">
-              I believe in writing clean, maintainable code and staying up-to-date with the latest
-              web technologies. When I'm not coding, you'll find me exploring new frameworks,
-              contributing to open source, or sharing knowledge with the developer community.
+              Great code should feel effortless to the user, just like great moments should feel
+              effortless in life.
             </p>
           </div>
         </div>
+        <div class="glass-effect rounded-lg p-6 flex flex-col gap-4 mt-6 mb-16">
+          <div class="flex gap-4">
+            <div>
+              <h4 class="text-lg font-semibold mb-1 text-code-blue">Fun Fact</h4>
+              <p class="text-muted-foreground">
+                I was always a dog lover and never liked cats... until I got a cat. Now I'm
+                officially a cat convert!
+              </p>
+            </div>
+            <span class="text-3xl">🐾</span>
+          </div>
+          <div class="flex flex-col">
+            <h4 class="text-lg font-semibold mb-4 text-code-purple">Meet Mel 🐱</h4>
 
-        <!-- Skills Grid -->
+            <div class="flex flex-col md:flex-row items-center md:items-start gap-8 mb-4">
+              <img src="/mel-1.jpg" alt="Mel 1" class="w-36 h-36 object-cover" />
+              <img src="/mel-2.jpg" alt="Mel 2" class="w-36 h-36 object-cover" />
+              <img src="/mel-3.jpg" alt="Mel 3" class="w-36 h-36 object-cover" />
+            </div>
+          </div>
+        </div>
+
         <div class="grid md:grid-cols-3 gap-6">
           <Card
             v-for="(skill, index) in skills"

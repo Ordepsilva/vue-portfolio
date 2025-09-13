@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { CalendarDays, MapPin } from 'lucide-vue-next';
 import Card from '../ui/card/Card.vue';
+import { useIsMobile } from '@/composables/useIsMobile';
+
+const isMobile = useIsMobile();
 
 const experiences = [
   {
@@ -69,7 +72,8 @@ const experiences = [
               class="relative flex items-start gap-8"
             >
               <div
-                class="flex-shrink-0 w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center animate-glow-pulse"
+                v-if="!isMobile"
+                class="flex-shrink-0 size-16 bg-gradient-primary rounded-full flex items-center justify-center animate-glow-pulse"
               >
                 <div class="w-3 h-3 bg-primary-foreground rounded-full"></div>
               </div>
