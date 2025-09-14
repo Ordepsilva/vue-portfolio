@@ -5,10 +5,10 @@ import 'vue-sonner/style.css';
 </script>
 
 <template>
-  <div class="min-h-screen bg-background">
+  <div class="min-h-screen flex flex-col bg-background">
     <footer className="border-t border-border bg-card/50">
       <Navigation />
-      <main>
+      <main class="flex-1">
         <RouterView />
         <Toaster />
       </main>
