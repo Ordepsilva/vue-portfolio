@@ -9,7 +9,7 @@ const projects = [
     description:
       'Full-featured Pokedex application built with Vue3 and TypeScript. Features real-time data fetching, responsive design, offline mode and a beautiful UI.',
     tech: ['Vue3', 'Vite', 'TypeScript', 'Tailwind CSS', 'Pinia', 'PWA'],
-    image: '/public/bloqitpokedex.png',
+    image: '/bloqitpokedex.png',
     github: 'https://github.com/Ordepsilva/bloq.it.fe.challenge',
     demo: 'https://bloqitpokedex.netlify.app/',
   },
@@ -18,7 +18,7 @@ const projects = [
     description:
       'Modern website for Ambiuus, a barber shop. Features online booking, service showcase, responsive design, and a stylish, professional look.',
     tech: ['React', 'Typescript', 'Next.js', 'Tailwind CSS'],
-    image: '/public/ambiuus-web.png',
+    image: '/ambiuus-web.png',
     github: 'https://github.com/Ordepsilva/AmbiuusWebsite',
     demo: 'https://ambiuus.netlify.app/',
   },
@@ -35,7 +35,7 @@ const projects = [
       'Extensions for Chrome',
       'CI/CD',
     ],
-    image: '/public/boon.png',
+    image: '/boon.png',
     github: '',
     demo: 'https://www.boon.ai/',
   },
@@ -44,7 +44,7 @@ const projects = [
     description:
       'My personal portfolio website showcasing my projects, experience, and skills, built with Vue 3 and Tailwind CSS.',
     tech: ['Vue 3', 'TypeScript', 'Tailwind CSS', 'Vite'],
-    image: '/public/portfolio.png',
+    image: '/portfolio.png',
     github: 'https://github.com/Ordepsilva/vue-portfolio',
     demo: '',
   },
@@ -53,7 +53,7 @@ const projects = [
     description:
       'Simdle Workshop is a garage management platform with features like warehouse and stock management, process digitalization, and customer prioritization. I built this with a team, and it was my first released project with actual customers.',
     tech: ['Svelte', 'Golang', 'MongoDB', 'TypeScript', 'CSS'],
-    image: '/public/simdle-workshop.png',
+    image: '/simdle-workshop.png',
     github: '',
     demo: 'https://automotive.simdle.lu/en/workshop',
   },

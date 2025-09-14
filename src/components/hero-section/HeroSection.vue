@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { ChevronDown } from 'lucide-vue-next'
-import Button from '../ui/button/Button.vue'
-import TerminalPrompt from '../terminal-prompt/TerminalPrompt.vue'
+import { ChevronDown } from 'lucide-vue-next';
+import Button from '../ui/button/Button.vue';
+import TerminalPrompt from '../terminal-prompt/TerminalPrompt.vue';
 
 function scrollToProjects() {
-  document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })
+  document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
 }
 </script>
 <template>
@@ -33,12 +33,14 @@ function scrollToProjects() {
             >
               View My Work
             </Button>
-            <Button
-              variant="outline"
-              class="border-primary text-primary hover:bg-primary hover:text-primary-foreground text-lg px-8 py-3"
-            >
-              Download CV
-            </Button>
+            <a href="/cv.pdf" download>
+              <Button
+                variant="outline"
+                class="border-primary text-primary hover:bg-primary hover:text-primary-foreground text-lg px-8 py-3"
+              >
+                Download CV
+              </Button>
+            </a>
           </div>
         </div>
       </div>
