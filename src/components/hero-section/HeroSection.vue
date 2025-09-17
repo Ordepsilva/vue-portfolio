@@ -36,7 +36,7 @@ function scrollToProjects() {
             <a href="/cv.pdf" download>
               <Button
                 variant="outline"
-                class="border-primary text-primary hover:bg-primary hover:text-primary-foreground text-lg px-8 py-3"
+                class="border-primary w-full text-primary hover:bg-primary hover:text-primary-foreground text-lg px-8 py-3"
               >
                 Download CV
               </Button>
