@@ -6,11 +6,11 @@ const currentLine = ref(0);
 
 const terminalLines = [
   '> whoami',
-  'Pedro Silva, Frontend Developer',
+  'Pedro Silva, Software Developer',
   '> experience --years',
-  'Close to 5 years of crafting digital experiences',
+  '5+ years of crafting digital experiences',
   '> skills --list',
-  'React • Svelte • Vue • TypeScript • Modern Web',
+  'React • Svelte • Vue • TypeScript • GO • Modern Web',
 ];
 
 const displayLines = computed(() => displayText.value.split('\n'));

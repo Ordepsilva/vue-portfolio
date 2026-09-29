@@ -5,7 +5,7 @@ import Card from '../ui/card/Card.vue';
 const skills = [
   {
     icon: Code,
-    title: 'Frontend Development',
+    title: 'Software Development',
     description: 'Knowledge in React, Svelte, Vue, and TypeScript',
     color: 'text-code-green',
   },
@@ -32,8 +32,7 @@ const skills = [
           <span class="text-glow">About Me</span>
         </h2>
         <p class="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Passionate frontend developer with close to 5 years of experience crafting digital
-          experiences
+         Software Engineer with 5+ years of experience crafting high-quality digital products, with a strong focus on frontend engineering.
         </p>
 
         <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
@@ -48,15 +47,15 @@ const skills = [
 
                 <div>
                   <span class="text-code-blue">role:</span>
-                  <span class="text-code-orange">"Frontend Developer"</span>,
+                  <span class="text-code-orange">"Software Developer - Frontend Focus"</span>,
                 </div>
                 <div>
                   <span class="text-code-blue">experience:</span>
-                  <span class="text-code-green">"Close to 5 years"</span>,
+                  <span class="text-code-green">"5+ years"</span>,
                 </div>
                 <div>
                   <span class="text-code-blue">passion:</span>
-                  <span class="text-code-orange">"Building amazing UIs"</span>,
+                  <span class="text-code-orange">"Building amazing UIs and experiences"</span>,
                 </div>
                 <div>
                   <span class="text-code-blue">specialties:</span> [
@@ -65,6 +64,7 @@ const skills = [
                     <div><span class="text-code-orange">"Svelte"</span>,</div>
                     <div><span class="text-code-orange">"Vue"</span>,</div>
                     <div><span class="text-code-orange">"TypeScript"</span></div>
+                    <div><span class="text-code-orange">"Go"</span></div>
                   </div>
                   ]
                 </div>
@@ -106,21 +106,6 @@ const skills = [
           </div>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-6">
-          <Card
-            v-for="(skill, index) in skills"
-            :key="index"
-            class="p-6 glass-effect border-border hover:border-primary/50 transition-all duration-300 hover:animate-glow-pulse"
-          >
-            <div class="text-center">
-              <div class="mb-4 inline-block">
-                <component :is="skill.icon" class="w-12 h-12" :class="skill.color" />
-              </div>
-              <h3 class="text-xl font-semibold mb-3">{{ skill.title }}</h3>
-              <p class="text-muted-foreground">{{ skill.description }}</p>
-            </div>
-          </Card>
-        </div>
       </div>
     </div>
   </section>
